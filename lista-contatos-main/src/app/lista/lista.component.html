@@ -1,0 +1,9 @@
+<h2>Lista de Contatos</h2>
+<button routerLink="/formulario">Adicionar Contato</button>
+<ul>
+  <li *ngFor="let contato of contatos">
+    {{ contato.name }} - {{ contato.email }} - {{ contato.phone }}
+    <button (click)="verDetalhe(contato.id)">Detalhes</button>
+    <button (click)="remover(contato.id)">Remover</button>
+  </li>
+</ul>
